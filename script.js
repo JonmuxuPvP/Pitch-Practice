@@ -45,6 +45,7 @@ class NoteRandomizer {
 
 const text = document.querySelector("#note");
 const randomNoteBtn = document.querySelector("#random-note");
+const replayNoteBtn = document.querySelector("#replay-note");
 const rootNoteBtn = document.querySelector("#root-note");
 const option = document.querySelector("#keys");
 const checkbox = document.querySelector("#hide-note");
@@ -55,6 +56,10 @@ text.innerHTML = noteRandomizer.display;
 
 randomNoteBtn.addEventListener("click", () => {
     noteRandomizer.randomNote();
+    noteRandomizer.play();
+});
+
+replayNoteBtn.addEventListener("click", () => {
     noteRandomizer.play();
 });
 

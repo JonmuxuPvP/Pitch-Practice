@@ -40,6 +40,7 @@ main > div {
 
 .buttons > button {
     font-size: 1em;
+    margin: 10px;
 }
 
 .menu-bar > div {
