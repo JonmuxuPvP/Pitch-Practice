@@ -1,0 +1,59 @@
+@import url("reset.css");
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans&display=swap');
+
+@font-face {
+    src: url('https://fonts.googleapis.com/css2?family=Work+Sans&display=swap');
+    font-family: 'Work Sans', sans-serif;
+}
+
+body {
+    text-align: center; 
+    font-family: 'Work Sans', sans-serif;
+
+    background-image: radial-gradient(#00345C, #052033);
+    background-repeat: no-repeat;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    
+    height: 100%;
+}
+
+main > div {
+    margin: 40px 0;
+}
+
+.note {
+    font-size: 5em;
+    color: white;
+}
+
+.clean {
+    padding: 10px;
+    border-style: none;
+    border-radius: 40px;
+    width: 100px;
+}
+
+.buttons > button {
+    font-size: 1em;
+}
+
+.menu-bar > div {
+    margin: 20px 0;
+}
+
+.keys {
+    width: 100px;
+    text-align: center;
+}
+
+@media screen and (max-width: 500px) {
+    .note {
+        font-size: 3.5em;
+        color: white;
+    }
+}
