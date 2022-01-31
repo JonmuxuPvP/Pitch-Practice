@@ -3,7 +3,6 @@ class NoteRandomizer {
     constructor(key) {
         this.map = this.generateMap();
         this.key = key;
-        this.audio = new Audio();
         this.display = "N/A";
     }
 
@@ -37,8 +36,9 @@ class NoteRandomizer {
     }
 
     play() {
-        this.audio.src = `./sound/${this.display.replace("#", "\%23")}.wav`; // replacing hash literal
-        this.audio.play();
+        let note = new Audio();
+        note.src = `./sound/${this.display.replace("#", "\%23")}.wav`; // replacing hash literal
+        note.play();
         this.updateText();
     }
 }
