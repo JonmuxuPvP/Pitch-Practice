@@ -32,7 +32,7 @@ class NoteRandomizer {
     }
 
     updateText() {
-        text.innerHTML = checkbox.innerHTML === "Hide" ? this.display.replace("-", "/") : "?";
+        text.innerHTML = hideNoteBtn.innerHTML === "Hide" ? this.display.replace("-", "/") : "?";
     }
 
     play() {
@@ -47,8 +47,8 @@ const text = document.querySelector("#note");
 const randomNoteBtn = document.querySelector("#random-note");
 const replayNoteBtn = document.querySelector("#replay-note");
 const rootNoteBtn = document.querySelector("#root-note");
+const hideNoteBtn = document.querySelector("#hide-note");
 const option = document.querySelector("#keys");
-const checkbox = document.querySelector("#hide-note");
 
 const noteRandomizer = new NoteRandomizer(option.value);
 
@@ -68,8 +68,8 @@ rootNoteBtn.addEventListener("click", () => {
     noteRandomizer.play();
 });
 
-checkbox.addEventListener("click", () => {
-    checkbox.innerHTML = checkbox.innerHTML === "Hide" ? "Show" : "Hide"; 
+hideNoteBtn.addEventListener("click", () => {
+    hideNoteBtn.innerHTML = hideNoteBtn.innerHTML === "Hide" ? "Show" : "Hide"; 
     noteRandomizer.updateText();
 });
 
